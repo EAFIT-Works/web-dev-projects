@@ -6,7 +6,7 @@ import { BooksModule } from './books/books.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'sqlite',
+      type: 'better-sqlite3',
       database: process.env.SQLITE_PATH || 'database.sqlite',
       autoLoadEntities: true,
       synchronize: true,
